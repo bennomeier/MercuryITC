@@ -1,0 +1,19 @@
+* Mercury ITC Temperature Controller
+A small python module to communicate with an Oxford Instruments Mercury ITC Temperature Controller over USB or Ethernet.
+
+The device must be in Remote Control Mode, and, if using Ethernet, the IP address must be configured on the device and in the init routine.
+
+The temperatureController class contains all the routines for communicating with the devices, including one for calibrating further temperature sensors.
+
+The temperatureControllerEthernet inherits from the former and uses the Ethernet protocol for communication.
+
+Make sure to update the devices configuration to match the setup of your controller. You can get the device specifiers using the getDevices() method. An example of the result of such a call is given in mercuryITC.org
+
+** Setup Requirements
+Requires: 
+- Python Installation
+- python serial module
+
+** Further Information
+The repository also includes an ipython notebook that was used to analyze data and produce a calibration file for a new sensor.  
+
